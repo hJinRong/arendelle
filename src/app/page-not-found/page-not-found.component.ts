@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageNotFoundComponent implements OnInit {
 
-  unbounded: boolean = true;
+  unbounded = true;
 
   constructor() { }
 
