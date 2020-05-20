@@ -1,2 +1,6 @@
-<app-navbar></app-navbar>
-<p>Here is articles</p>
+<div class="navbar-con" [@openCloseNavBar]="isOpen ? 'open' : 'closed'">
+  <app-navbar></app-navbar>
+</div>
+<div class="panel-con">
+  <app-panel></app-panel>
+</div>
