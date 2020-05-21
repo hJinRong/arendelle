@@ -1,8 +1,15 @@
 <div class="panel-root">
-  <app-article-card></app-article-card>
-  <app-article-card></app-article-card>
-  <app-article-card></app-article-card>
-  <app-article-card></app-article-card>
-  <app-article-card></app-article-card>
-  <app-article-card></app-article-card>
+  <div class="detail-con">
+    <button (click)="trigger()">trigger</button>
+    <app-details></app-details>
+  </div>
+
+  <div class="card-con" [@controlCardCon]="isOpen ? 'open' : 'closed'">
+    <app-article-card></app-article-card>
+    <app-article-card></app-article-card>
+    <app-article-card></app-article-card>
+    <app-article-card></app-article-card>
+    <app-article-card></app-article-card>
+    <app-article-card></app-article-card>
+  </div>
 </div>

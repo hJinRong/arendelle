@@ -1,5 +1,16 @@
 .panel-root {
   height: 100%;
+  width: 100%;
+  background-color: gray;
+  float: left;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-con {
+  position: relative;
+  height: 100%;
   width: 57%;
   background-color: #33153f;
   float: right;
@@ -10,4 +21,28 @@
   scrollbar-width: 5px;
   scrollbar-color: gray;
   border-bottom-left-radius: 47px;
+}
+
+.detail-con {
+  position: relative;
+  float: left;
+  height: 100%;
+  background-color: yellowgreen;
+  flex-grow: 1;
+  scrollbar-width: 5px;
+  scrollbar-color: gray;
+  overflow: hidden;
+  // overflow-y: scroll;
+}
+
+.card-con::-webkit-scrollbar,
+.detail-con::-webkit-scrollbar {
+  width: 10px;
+  height: 30px;
+}
+
+.card-con::-webkit-scrollbar-thumb,
+.detail-con::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: linear-gradient(180deg, #ff5445, rgba(91, 255, 250, 0.667));
 }

@@ -6,6 +6,7 @@ import { GalleryRoutingModule } from './gallery-routing.module';
 import { PanelComponent } from './panel/panel.component';
 import { ArticleCardComponent } from './article-card/article-card.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { MatDividerModule } from '@angular/material/divider';
     ArticlesComponent,
     PanelComponent,
     ArticleCardComponent,
+    DetailsComponent,
   ],
   imports: [CommonModule, GalleryRoutingModule, MatDividerModule],
 })
