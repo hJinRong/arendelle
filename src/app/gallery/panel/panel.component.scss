@@ -27,12 +27,13 @@
   position: relative;
   float: left;
   height: 100%;
+  width: min-content;
   background-color: yellowgreen;
   flex-grow: 1;
   scrollbar-width: 5px;
   scrollbar-color: gray;
-  overflow: hidden;
-  // overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .card-con::-webkit-scrollbar,
