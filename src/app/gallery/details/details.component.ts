@@ -16,7 +16,7 @@ export class DetailsComponent implements OnInit {
     this.expanded = this.state;
   }
 
-  //FIXME maybe we don't need it
+  // FIXME maybe we don't need it
   trigger() {
     this.expanded = !this.expanded;
   }
