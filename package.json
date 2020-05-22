@@ -2,6 +2,7 @@
   "name": "arendelle",
   "version": "0.0.0",
   "scripts": {
+    "prettier": "prettier --write ./src ./e2e",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
