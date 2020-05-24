@@ -1,10 +1,19 @@
 <div class="panel-root">
   <div class="detail-con">
-    <button (click)="trigger()">trigger</button>
+    <div (click)="toggleFocus()" class="controlIcon">
+      <img
+        [src]="
+          articleEnlarged
+            ? '/assets/control/reduce.svg'
+            : 'assets/control/enlarge.svg'
+        "
+        alt="svg"
+      />
+    </div>
     <app-details></app-details>
   </div>
 
-  <div class="card-con" [@controlCardCon]="isOpen ? 'open' : 'closed'">
+  <div class="card-con" [@controlCardCon]="cardConFocused ? 'open' : 'closed'">
     <app-article-card></app-article-card>
     <app-article-card></app-article-card>
     <app-article-card></app-article-card>

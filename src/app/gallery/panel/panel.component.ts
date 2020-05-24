@@ -6,6 +6,7 @@ import {
   transition,
   animate,
 } from '@angular/animations';
+import { ToggleService } from '../toggle.service';
 
 @Component({
   selector: 'app-panel',
@@ -26,6 +27,7 @@ import {
           width: 0,
           opacity: 0,
           visibility: 'hidden',
+          padding: 0,
         })
       ),
       transition('open<=>closed', [animate('0.3s')]),
@@ -33,13 +35,17 @@ import {
   ],
 })
 export class PanelComponent implements OnInit {
-  isOpen = true;
+  cardConFocused = true;
+  articleEnlarged: boolean;
 
-  constructor() {}
+  constructor(private tgs: ToggleService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.tgs.cardConFocused.subscribe((x) => (this.cardConFocused = x));
+    this.tgs.articleFocused.subscribe((x) => (this.articleEnlarged = x));
+  }
 
-  trigger() {
-    this.isOpen = !this.isOpen;
+  toggleFocus() {
+    this.tgs.toggle();
   }
 }

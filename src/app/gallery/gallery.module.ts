@@ -7,6 +7,7 @@ import { PanelComponent } from './panel/panel.component';
 import { ArticleCardComponent } from './article-card/article-card.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { DetailsComponent } from './details/details.component';
+import { ToggleService } from './toggle.service';
 
 @NgModule({
   declarations: [
@@ -17,5 +18,6 @@ import { DetailsComponent } from './details/details.component';
     DetailsComponent,
   ],
   imports: [CommonModule, GalleryRoutingModule, MatDividerModule],
+  providers: [ToggleService],
 })
 export class GalleryModule {}
