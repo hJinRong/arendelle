@@ -13,6 +13,40 @@ import {
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss'],
   animations: [
+    trigger('imgWidth', [
+      state(
+        'enlarge',
+        style({
+          width: '100%',
+          height: '426px',
+          left: '0',
+        })
+      ),
+      state(
+        'reduce',
+        style({
+          width: '220px',
+          height: '280px',
+          left: '-17%',
+        })
+      ),
+      transition('enlarge<=>reduce', [animate('0.3s')]),
+    ]),
+    trigger('radius', [
+      state(
+        'enlarge',
+        style({
+          borderRadius: 0,
+        })
+      ),
+      state(
+        'reduce',
+        style({
+          borderRadius: '24px',
+        })
+      ),
+      transition('enlarge<=>reduce', [animate('0.3s')]),
+    ]),
     trigger('focusOnDetails', [
       state(
         'focus',
