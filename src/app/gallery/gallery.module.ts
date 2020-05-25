@@ -8,6 +8,7 @@ import { ArticleCardComponent } from './article-card/article-card.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { DetailsComponent } from './details/details.component';
 import { ToggleService } from './toggle.service';
+import { RequestArticlesService } from './request-articles.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,6 @@ import { ToggleService } from './toggle.service';
     DetailsComponent,
   ],
   imports: [CommonModule, GalleryRoutingModule, MatDividerModule],
-  providers: [ToggleService],
+  providers: [ToggleService, RequestArticlesService],
 })
 export class GalleryModule {}

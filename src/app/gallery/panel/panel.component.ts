@@ -7,6 +7,8 @@ import {
   animate,
 } from '@angular/animations';
 import { ToggleService } from '../toggle.service';
+import { RequestArticlesService } from '../request-articles.service';
+import { Article } from '../article';
 
 @Component({
   selector: 'app-panel',
@@ -37,12 +39,19 @@ import { ToggleService } from '../toggle.service';
 export class PanelComponent implements OnInit {
   cardConFocused = true;
   articleEnlarged: boolean;
+  articlesArr: Article[];
 
-  constructor(private tgs: ToggleService) {}
+  constructor(
+    private tgs: ToggleService,
+    private ras: RequestArticlesService
+  ) {}
 
   ngOnInit(): void {
     this.tgs.cardConFocused.subscribe((x) => (this.cardConFocused = x));
     this.tgs.articleFocused.subscribe((x) => (this.articleEnlarged = x));
+    this.ras
+      .requestForArticles()
+      .subscribe((data) => (this.articlesArr = data));
   }
 
   toggleFocus() {

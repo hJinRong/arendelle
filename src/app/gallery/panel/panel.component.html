@@ -10,15 +10,17 @@
         alt="svg"
       />
     </div>
-    <app-details></app-details>
+    <!-- <app-details></app-details> -->
+    <router-outlet></router-outlet>
   </div>
 
   <div class="card-con" [@controlCardCon]="cardConFocused ? 'open' : 'closed'">
-    <app-article-card></app-article-card>
-    <app-article-card></app-article-card>
-    <app-article-card></app-article-card>
-    <app-article-card></app-article-card>
-    <app-article-card></app-article-card>
-    <app-article-card></app-article-card>
+    <app-article-card
+      *ngFor="let item of articlesArr"
+      [objectId]="item.objectId"
+      [title]="item.title"
+      [author]="item.author"
+      [publicationDate]="item.publicationDate"
+    ></app-article-card>
   </div>
 </div>

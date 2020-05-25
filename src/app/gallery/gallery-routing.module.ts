@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArticlesComponent } from './articles/articles.component';
-import { PanelComponent } from './panel/panel.component';
+import { DetailsComponent } from './details/details.component';
 
 const galleryRoutes: Routes = [
   {
     path: 'articles',
     component: ArticlesComponent,
-    // children: [
-    //   {
-    //     path: '',
-    //     component: PanelComponent,
-    //   },
-    // ],
+    children: [
+      {
+        path: ':objectId',
+        component: DetailsComponent,
+      },
+    ],
   },
 ];
 

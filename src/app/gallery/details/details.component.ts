@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ToggleService } from '../toggle.service';
 import {
   trigger,
@@ -8,6 +8,10 @@ import {
   animate,
 } from '@angular/animations';
 import * as marked from 'marked';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { RequestArticlesService } from '../request-articles.service';
+import { Article } from '../article';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-details',
@@ -68,16 +72,26 @@ import * as marked from 'marked';
 export class DetailsComponent implements OnInit {
   focused: boolean;
 
-  @Input() title: string = 'Wait for a minute';
-  @Input() content: string = `## Loading...`;
+  articleObj: Article;
 
   public get decodeContent(): string {
-    return marked(this.content);
+    return marked(this.articleObj.content);
   }
 
-  constructor(private tgs: ToggleService) {}
+  constructor(
+    private tgs: ToggleService,
+    private ras: RequestArticlesService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.tgs.articleFocused.subscribe((x) => (this.focused = x));
+    this.route.paramMap
+      .pipe(
+        switchMap((params: ParamMap) =>
+          this.ras.requestForAArticle(params.get('objectId'))
+        )
+      )
+      .subscribe((data: Article) => (this.articleObj = data));
   }
 }

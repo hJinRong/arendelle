@@ -1,13 +1,17 @@
 <div class="card-root">
   <div class="author">
     <img src="/assets/404/white-tent.jpg" />
-    <span>Amy Smith</span>
+    <span>{{ author }}</span>
   </div>
   <div class="ilustri">
     <img src="/assets/404/white-tent.jpg" />
   </div>
-  <div class="title">
-    This is a title.
+  <div
+    class="title"
+    [routerLink]="[objectId]"
+    routerLinkActive="router-link-active"
+  >
+    {{ title }}
   </div>
 </div>
 <mat-divider style="border-top-color: #f5f5f585;"></mat-divider>
