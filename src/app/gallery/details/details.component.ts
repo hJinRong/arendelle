@@ -68,8 +68,8 @@ import * as marked from 'marked';
 export class DetailsComponent implements OnInit {
   focused: boolean;
 
-  @Input() title: string;
-  @Input() content: string;
+  @Input() title: string = 'Wait for a minute';
+  @Input() content: string = `## Loading...`;
 
   public get decodeContent(): string {
     return marked(this.content);
