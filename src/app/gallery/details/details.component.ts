@@ -7,6 +7,7 @@ import {
   transition,
   animate,
 } from '@angular/animations';
+import * as marked from 'marked';
 
 @Component({
   selector: 'app-details',
@@ -66,6 +67,13 @@ import {
 })
 export class DetailsComponent implements OnInit {
   focused: boolean;
+
+  @Input() title: string;
+  @Input() content: string;
+
+  public get decodeContent(): string {
+    return marked(this.content);
+  }
 
   constructor(private tgs: ToggleService) {}
 

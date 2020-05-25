@@ -9,36 +9,9 @@
   <div class="article-info">
     Wow! My blog coming!
   </div>
-  <div class="content-con" [@focusOnDetails]="focused ? 'focus' : 'blur'">
-    <p class="article-content">
-      Ross’s response was one short word. This incident was originally caused by
-      Luffy and others when they rescued a Mermaid of the Fishman Island, which
-      was equivalent to Luffy doing his work for him. Buzz!!Ross’s response was
-      one short word. This incident was originally caused by Luffy and others
-      when they rescued a Mermaid of the Fishman Island, which was equivalent to
-      Luffy doing his work for him. Buzz!!Ross’s response was one short word.
-      This incident was originally caused by Luffy and others when they rescued
-      a Mermaid of the Fishman Island, which was equivalent to Luffy doing his
-      work for him. Buzz!!Ross’s response was one short word. This incident was
-      originally caused by Luffy and others when they rescued a Mermaid of the
-      Fishman Island, which was equivalent to Luffy doing his work for him.
-      Buzz!!Ross’s response was one short word. This incident was originally
-      caused by Luffy and others when they rescued a Mermaid of the Fishman
-      Island, which was equivalent to Luffy doing his work for him. Buzz!!
-      Ross’s response was one short word. This incident was originally caused by
-      Luffy and others when they rescued a Mermaid of the Fishman Island, which
-      was equivalent to Luffy doing his work for him. Buzz!!Ross’s response was
-      one short word. This incident was originally caused by Luffy and others
-      when they rescued a Mermaid of the Fishman Island, which was equivalent to
-      Luffy doing his work for him. Buzz!!Ross’s response was one short word.
-      This incident was originally caused by Luffy and others when they rescued
-      a Mermaid of the Fishman Island, which was equivalent to Luffy doing his
-      work for him. Buzz!!Ross’s response was one short word. This incident was
-      originally caused by Luffy and others when they rescued a Mermaid of the
-      Fishman Island, which was equivalent to Luffy doing his work for him.
-      Buzz!!Ross’s response was one short word. This incident was originally
-      caused by Luffy and others when they rescued a Mermaid of the Fishman
-      Island, which was equivalent to Luffy doing his work for him. Buzz!!
-    </p>
-  </div>
+  <div
+    class="content-con"
+    [@focusOnDetails]="focused ? 'focus' : 'blur'"
+    [innerHTML]="decodeContent"
+  ></div>
 </div>
