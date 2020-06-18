@@ -11,7 +11,6 @@
 .card-con {
   position: relative;
   height: 100%;
-  width: 43%;
   background-color: #33153f;
   float: right;
   padding-left: 1em;
@@ -27,7 +26,6 @@
   float: left;
   height: 100%;
   width: min-content;
-  // flex-grow: 1;
   flex: 1 1 auto;
   scrollbar-width: 5px;
   overflow-x: hidden;
