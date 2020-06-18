@@ -89,7 +89,7 @@ export class DetailsComponent implements OnInit {
     this.route.paramMap
       .pipe(
         switchMap((params: ParamMap) =>
-          this.ras.requestForAArticle(params.get('objectId'))
+          this.ras.requestForAnArticle(params.get('aid'))
         )
       )
       .subscribe((data: Article) => (this.articleObj = data));

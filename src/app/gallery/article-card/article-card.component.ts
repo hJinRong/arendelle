@@ -8,10 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ArticleCardComponent implements OnInit {
   constructor() {}
 
-  @Input() objectId: string;
+  @Input() aid: string;
   @Input() title: string;
-  @Input() author: string;
-  @Input() publicationDate: string;
+  @Input() date: string;
 
   ngOnInit(): void {}
 }

@@ -9,7 +9,7 @@ const galleryRoutes: Routes = [
     component: ArticlesComponent,
     children: [
       {
-        path: ':objectId',
+        path: ':aid',
         component: DetailsComponent,
       },
     ],

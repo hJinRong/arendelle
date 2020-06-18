@@ -17,10 +17,9 @@
   <div class="card-con" [@controlCardCon]="cardConFocused ? 'open' : 'closed'">
     <app-article-card
       *ngFor="let item of articlesArr"
-      [objectId]="item.objectId"
+      [aid]="item.aid"
       [title]="item.title"
-      [author]="item.author"
-      [publicationDate]="item.publicationDate"
+      [date]="item.date"
     ></app-article-card>
   </div>
 </div>

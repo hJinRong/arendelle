@@ -7,13 +7,15 @@ import { retry } from 'rxjs/operators';
 export class RequestArticlesService {
   constructor(private http: HttpClient) {}
 
-  // FIXME config the url
   requestForArticles() {
-    return this.http.get<Article[]>('url').pipe(retry(2));
+    return this.http
+      .get<Article[]>('https://arendelle.tech/api/my-articles')
+      .pipe(retry(2));
   }
 
-  // FIXME config the url
-  requestForAArticle(objectId: string) {
-    return this.http.get<Article>(`url/${objectId}`).pipe(retry(2));
+  requestForAnArticle(aid: string) {
+    return this.http
+      .get<Article>(`https://arendelle.tech/api/get-article/${aid}`)
+      .pipe(retry(2));
   }
 }

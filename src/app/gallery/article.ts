@@ -1,8 +1,6 @@
 export interface Article {
-  objectId: string;
-  author: string;
+  aid: string;
   title: string;
   content?: string;
-  publicationDate?: string;
-  modifiedDate?: string;
+  date?: string;
 }
