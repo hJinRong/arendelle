@@ -1,13 +1,16 @@
 <div class="card-root">
-  <!-- <div class="author">
-    <img src="/assets/404/white-tent.jpg" />
-    <span>{{ author }}</span>
-  </div> -->
-  <div class="ilustri">
-    <img src="/assets/404/white-tent.jpg" />
+  <div class="info">
+    <h2
+      class="title"
+      [routerLink]="[aid]"
+      routerLinkActive="router-link-active"
+    >
+      {{ title }}
+    </h2>
+    <h4 class="date">{{ date }}</h4>
   </div>
-  <div class="title" [routerLink]="[aid]" routerLinkActive="router-link-active">
-    {{ title }}
+  <div class="ilustri">
+    <img src="/assets/404/white-tent.jpg" alt="ilustri" />
   </div>
 </div>
 <mat-divider style="border-top-color: #f5f5f585;"></mat-divider>
