@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck, AfterViewChecked } from '@angular/core';
 import { ToggleService } from '../toggle.service';
 import {
   trigger,
@@ -12,6 +12,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { RequestArticlesService } from '../request-articles.service';
 import { Article } from '../article';
 import { switchMap } from 'rxjs/operators';
+import * as hljs from 'highlight.js';
 
 @Component({
   selector: 'app-details',
@@ -69,7 +70,7 @@ import { switchMap } from 'rxjs/operators';
     ]),
   ],
 })
-export class DetailsComponent implements OnInit {
+export class DetailsComponent implements OnInit, AfterViewChecked {
   focused: boolean;
 
   articleObj: Article;
@@ -93,5 +94,11 @@ export class DetailsComponent implements OnInit {
         )
       )
       .subscribe((data: Article) => (this.articleObj = data));
+  }
+
+  ngAfterViewChecked() {
+    document
+      .querySelectorAll<HTMLElement>('pre code')
+      .forEach((block) => hljs.highlightBlock(block));
   }
 }

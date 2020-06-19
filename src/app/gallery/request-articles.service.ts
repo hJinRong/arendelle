@@ -9,7 +9,7 @@ export class RequestArticlesService {
 
   requestForArticles() {
     return this.http
-      .get<Article[]>('https://arendelle.tech/api/my-articles')
+      .get<Article[]>('https://arendelle.tech/api/get-articles')
       .pipe(retry(2));
   }
 
