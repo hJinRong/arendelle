@@ -49,4 +49,8 @@ pre {
     font-family: "JetbrainsMono";
     line-height: 1.4em;
   }
+  & code {
+    padding: 0.6em 1em;
+    border-radius: 8px;
+  }
 }
