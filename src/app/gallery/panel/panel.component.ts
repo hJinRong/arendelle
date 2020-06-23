@@ -37,8 +37,7 @@ import { Article } from '../article';
   ],
 })
 export class PanelComponent implements OnInit {
-  cardConFocused = true;
-  articleEnlarged: boolean;
+  focusOnArticle: boolean;
   articlesArr: Article[];
 
   constructor(
@@ -47,14 +46,13 @@ export class PanelComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.tgs.cardConFocused.subscribe((x) => (this.cardConFocused = x));
-    this.tgs.articleFocused.subscribe((x) => (this.articleEnlarged = x));
+    this.tgs.focusOnArticle.subscribe((value) => (this.focusOnArticle = value));
     this.ras
       .requestForArticles()
       .subscribe((data) => (this.articlesArr = data));
   }
 
-  toggleFocus() {
+  viewModeToggle() {
     this.tgs.toggle();
   }
 }

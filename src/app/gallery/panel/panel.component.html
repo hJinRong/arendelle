@@ -1,11 +1,11 @@
 <div class="panel-root">
   <div class="detail-con">
-    <div (click)="toggleFocus()" class="controlIcon">
+    <div (click)="viewModeToggle()" class="controlIcon">
       <img
         [src]="
-          articleEnlarged
+          focusOnArticle
             ? '/assets/control/reduce.svg'
-            : 'assets/control/enlarge.svg'
+            : '/assets/control/enlarge.svg'
         "
         alt="svg"
       />
@@ -13,7 +13,7 @@
     <router-outlet></router-outlet>
   </div>
 
-  <div class="card-con" [@controlCardCon]="cardConFocused ? 'open' : 'closed'">
+  <div class="card-con" [@controlCardCon]="focusOnArticle ? 'closed' : 'open'">
     <app-article-card
       *ngFor="let item of articlesArr"
       [aid]="item.aid"

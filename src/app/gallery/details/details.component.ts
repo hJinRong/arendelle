@@ -86,7 +86,7 @@ export class DetailsComponent implements OnInit, AfterViewChecked {
   ) {}
 
   ngOnInit(): void {
-    this.tgs.articleFocused.subscribe((x) => (this.focused = x));
+    this.tgs.focusOnArticle.subscribe((value) => (this.focused = value));
     this.route.paramMap
       .pipe(
         switchMap((params: ParamMap) =>

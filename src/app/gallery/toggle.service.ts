@@ -3,28 +3,13 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class ToggleService {
-  cardConFocused: BehaviorSubject<boolean>;
-  articleFocused: BehaviorSubject<boolean>;
-  onCardCon = true;
+  focusOnArticle: BehaviorSubject<boolean>;
 
   constructor() {
-    this.cardConFocused = new BehaviorSubject(true);
-    this.articleFocused = new BehaviorSubject(false);
-  }
-
-  focusOnCardCon() {
-    this.cardConFocused.next(true);
-    this.articleFocused.next(false);
-  }
-
-  focusOnArticle() {
-    this.cardConFocused.next(false);
-    this.articleFocused.next(true);
+    this.focusOnArticle = new BehaviorSubject<boolean>(false);
   }
 
   toggle() {
-    this.onCardCon = !this.onCardCon;
-    this.cardConFocused.next(this.onCardCon);
-    this.articleFocused.next(!this.onCardCon);
+    this.focusOnArticle.next(!this.focusOnArticle.value);
   }
 }
