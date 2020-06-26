@@ -11,6 +11,12 @@ export class ArticleCardComponent implements OnInit {
   @Input() aid: string;
   @Input() title: string;
   @Input() date: string;
+  @Input() figure: string;
 
+  get figureSrc(): string {
+    return this.figure
+      ? `https://arendelle.tech/api/get-figure/${this.figure}`
+      : '/assets/404/white-tent.jpg';
+  }
   ngOnInit(): void {}
 }

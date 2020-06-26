@@ -75,6 +75,12 @@ export class DetailsComponent implements OnInit, AfterViewChecked {
 
   articleObj: Article;
 
+  public get figureSrc(): string {
+    return this.articleObj.figure
+      ? `https://arendelle.tech/api/get-figure/${this.articleObj.figure}`
+      : '/assets/404/white-tent.jpg';
+  }
+
   public get decodeContent(): string {
     return marked(this.articleObj.content);
   }

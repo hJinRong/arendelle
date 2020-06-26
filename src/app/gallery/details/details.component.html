@@ -2,7 +2,7 @@
   <div class="detail-root">
     <div class="figure" [@imgWidth]="focused ? 'enlarge' : 'reduce'">
       <img
-        src="/assets/404/white-tent.jpg"
+        [src]="figureSrc"
         alt="figure"
         [@radius]="focused ? 'enlarge' : 'reduce'"
       />
