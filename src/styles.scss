@@ -42,6 +42,18 @@ p {
   font-family: "JetbrainsMono";
 }
 
+// 段落内代码关键词等
+p {
+  & code {
+    font-size: 0.8em;
+    background-color: rgb(251, 251, 191);
+    color: #734cf4;
+    font-family: "JetbrainsMono";
+    padding: 0 5px;
+  }
+}
+
+// 代码块
 pre {
   & code,
   & span {
@@ -52,5 +64,15 @@ pre {
   & code {
     padding: 0.6em 1em;
     border-radius: 8px;
+  }
+}
+
+// 引用块
+blockquote {
+  & p {
+    font-size: smaller;
+    border-left: solid 3px rgb(20, 81, 122);
+    text-indent: 0;
+    padding-left: 1em;
   }
 }
