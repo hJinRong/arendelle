@@ -51,6 +51,10 @@ p {
     font-family: "JetbrainsMono";
     padding: 0 5px;
   }
+  & img {
+    display: block;
+    width: 100%;
+  }
 }
 
 // 代码块
