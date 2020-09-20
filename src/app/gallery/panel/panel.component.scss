@@ -31,17 +31,34 @@
   overflow-y: scroll;
 }
 
-.github-icon-con {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(135deg, rgb(3, 3, 3) 70.71px, transparent 0);
-  a {
-    display: block;
-    width: 49px;
-    height: 49px;
-    transform: rotate(-45deg);
-    margin: 0.1em;
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
   }
 }
 
