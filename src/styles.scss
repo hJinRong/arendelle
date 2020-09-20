@@ -7,24 +7,7 @@
   font-family: JetbrainsMono;
   src: url('/assets/font/JetBrainsMono-Regular.woff') format('woff');
   size: 400;
-}
-
-@font-face {
-  font-family: JetbrainsMonoMedium;
-  src: url('/assets/font/JetBrainsMono-Medium.woff') format('woff');
-  size: 500;
-}
-
-@font-face {
-  font-family: JetbrainsMonoItalic;
-  src: url('/assets/font/JetBrainsMono-Italic.woff') format('woff');
-  size: 400;
-}
-
-@font-face {
-  font-family: JetbrainsMonoBold;
-  src: url('/assets/font/JetBrainsMono-Bold.woff') format('woff');
-  size: 400;
+  font-display: swap;
 }
 
 body {
