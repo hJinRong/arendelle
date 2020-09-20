@@ -5,25 +5,25 @@
 
 @font-face {
   font-family: JetbrainsMono;
-  src: url("/assets/font/JetBrainsMono-Regular.woff") format("woff");
+  src: url('/assets/font/JetBrainsMono-Regular.woff') format('woff');
   size: 400;
 }
 
 @font-face {
   font-family: JetbrainsMonoMedium;
-  src: url("/assets/font/JetBrainsMono-Medium.woff") format("woff");
+  src: url('/assets/font/JetBrainsMono-Medium.woff') format('woff');
   size: 500;
 }
 
 @font-face {
   font-family: JetbrainsMonoItalic;
-  src: url("/assets/font/JetBrainsMono-Italic.woff") format("woff");
+  src: url('/assets/font/JetBrainsMono-Italic.woff') format('woff');
   size: 400;
 }
 
 @font-face {
   font-family: JetbrainsMonoBold;
-  src: url("/assets/font/JetBrainsMono-Bold.woff") format("woff");
+  src: url('/assets/font/JetBrainsMono-Bold.woff') format('woff');
   size: 400;
 }
 
@@ -39,7 +39,7 @@ p {
 * {
   outline: none;
   font-size: 21px;
-  font-family: "JetbrainsMono";
+  font-family: 'JetbrainsMono';
 }
 
 // 段落内代码关键词等
@@ -48,7 +48,7 @@ p {
     font-size: 0.8em;
     background-color: rgb(251, 251, 191);
     color: #734cf4;
-    font-family: "JetbrainsMono";
+    font-family: 'JetbrainsMono';
     padding: 0 5px;
   }
   & img {
@@ -62,7 +62,7 @@ pre {
   & code,
   & span {
     font-size: 16px;
-    font-family: "JetbrainsMono";
+    font-family: 'JetbrainsMono';
     line-height: 1.4em;
   }
   & code {
