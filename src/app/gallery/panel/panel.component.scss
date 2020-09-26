@@ -9,6 +9,19 @@
   background-color: #f5f5f5;
 }
 
+.controlIcon {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: inline-block;
+  z-index: 2;
+  cursor: pointer;
+
+  & > img {
+    display: block;
+  }
+}
+
 .article-list-con {
   position: relative;
   height: 100%;
@@ -34,19 +47,6 @@
     width: 80px;
     height: 80px;
     z-index: 2;
-  }
-
-  .controlIcon {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    display: inline-block;
-    z-index: 2;
-    cursor: pointer;
-
-    & > img {
-      display: block;
-    }
   }
 }
 

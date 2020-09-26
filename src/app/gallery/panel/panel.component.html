@@ -1,4 +1,14 @@
 <div class="panel-root">
+  <div (click)="viewModeToggle()" class="controlIcon">
+    <img
+      [src]="
+        focusOnArticle
+          ? '/assets/control/reduce.svg'
+          : '/assets/control/enlarge.svg'
+      "
+      alt="svg"
+    />
+  </div>
   <div class="article-detail-con">
     <div class="github">
       <a
@@ -34,16 +44,6 @@
           ></path>
         </svg>
       </a>
-    </div>
-    <div (click)="viewModeToggle()" class="controlIcon">
-      <img
-        [src]="
-          focusOnArticle
-            ? '/assets/control/reduce.svg'
-            : '/assets/control/enlarge.svg'
-        "
-        alt="svg"
-      />
     </div>
     <router-outlet></router-outlet>
   </div>
