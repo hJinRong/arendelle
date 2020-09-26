@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ArticlesComponent } from './articles/articles.component';
 import { DetailsComponent } from './details/details.component';
+import { PanelComponent } from './panel/panel.component';
 
 const galleryRoutes: Routes = [
   {
     path: 'articles',
-    component: ArticlesComponent,
+    component: PanelComponent,
     children: [
       {
         path: ':aid',
