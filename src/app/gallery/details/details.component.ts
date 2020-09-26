@@ -57,7 +57,7 @@ import { highlightBlock } from 'highlight.js';
       state(
         'focus',
         style({
-          width: '60%',
+          width: 'clamp(calc(320px - 5vw), 60%, 900px)',
         })
       ),
       state(
