@@ -21,21 +21,20 @@ p {
 
 * {
   outline: none;
-  font-size: 21px;
   font-family: 'JetbrainsMono', Roboto, 'Helvetica Neue Light', 'Helvetica Neue',
     Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
 
 // 段落内代码关键词等
 p {
-  & code {
+  code {
     font-size: 0.8em;
     background-color: rgb(251, 251, 191);
     color: #734cf4;
     font-family: 'JetbrainsMono';
     padding: 0 5px;
   }
-  & img {
+  img {
     display: block;
     width: 100%;
   }
@@ -43,13 +42,13 @@ p {
 
 // 代码块
 pre {
-  & code,
-  & span {
+  code,
+  span {
     font-size: 16px;
     font-family: 'JetbrainsMono';
     line-height: 1.4em;
   }
-  & code {
+  code {
     padding: 0.6em 1em;
     border-radius: 8px;
   }
@@ -57,7 +56,7 @@ pre {
 
 // 引用块
 blockquote {
-  & p {
+  p {
     font-size: smaller;
     border-left: solid 3px rgb(20, 81, 122);
     text-indent: 0;
