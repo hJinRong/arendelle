@@ -9,7 +9,7 @@
       alt="svg"
     />
   </div>
-  <div class="article-detail-con">
+  <div class="article-detail-con side">
     <div class="github">
       <a
         href="https://github.com/hJinRong"
@@ -49,8 +49,8 @@
   </div>
 
   <div
-    class="article-list-con"
-    [@controlCardCon]="focusOnArticle ? 'closed' : 'open'"
+    class="article-list-con side"
+    [@triggerArticleListStyle]="focusOnArticle ? 'closed' : 'open'"
   >
     <app-article-card
       *ngFor="let item of articlesArr"

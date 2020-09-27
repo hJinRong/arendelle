@@ -15,11 +15,11 @@ import { Article } from '../article';
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.scss'],
   animations: [
-    trigger('controlCardCon', [
+    trigger('triggerArticleListStyle', [
       state(
         'open',
         style({
-          width: '43%',
+          width: 'clamp(375px, 43%, 43%)',
           opacity: 1,
         })
       ),
