@@ -19,7 +19,7 @@ import { Article } from '../article';
       state(
         'open',
         style({
-          width: 'clamp(375px, 43%, 43%)',
+          width: 'clamp(320px, 100vw, 717px)',
           opacity: 1,
         })
       ),

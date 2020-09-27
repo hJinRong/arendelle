@@ -30,6 +30,10 @@
 }
 
 .article-list-con {
+  // 在浏览器、移动设备上，宽度受width约束，有剩余空间不扩展，缺空间不缩减
+  flex: 0 0 auto;
+  // width设置为element.style, 不在样式表设置宽度padding会导致盒子宽度变长
+  box-sizing: border-box;
   background-color: #33153f;
   padding: 0 1em;
   scrollbar-width: 5px;
