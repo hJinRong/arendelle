@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ToggleService } from '../toggle.service';
 
 @Component({
   selector: 'app-article-card',
@@ -6,8 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./article-card.component.scss'],
 })
 export class ArticleCardComponent implements OnInit {
-  constructor() {}
-
   @Input() aid: string;
   @Input() title: string;
   @Input() date: string;
@@ -18,5 +17,14 @@ export class ArticleCardComponent implements OnInit {
       ? `https://arendelle.tech/api/get-figure/${this.figure}`
       : '/assets/404/white-tent.jpg';
   }
+
+  constructor(private tgs: ToggleService) {}
+
   ngOnInit(): void {}
+
+  viewModeToggle() {
+    if (window.screen.width <= 1024) {
+      this.tgs.toggle();
+    }
+  }
 }
