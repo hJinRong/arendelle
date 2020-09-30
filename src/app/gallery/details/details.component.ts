@@ -1,4 +1,10 @@
-import { Component, OnInit, DoCheck, AfterViewChecked } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  DoCheck,
+  AfterViewChecked,
+  ViewEncapsulation,
+} from '@angular/core';
 import { ToggleService } from '../toggle.service';
 import {
   trigger,
@@ -17,7 +23,7 @@ import { highlightBlock } from 'highlight.js';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss'],
+  styleUrls: ['./details.component.scss', './code-style.scss'],
   animations: [
     trigger('imgWidth', [
       state(
@@ -69,6 +75,7 @@ import { highlightBlock } from 'highlight.js';
       transition('focus<=>blur', [animate('0.2s')]),
     ]),
   ],
+  encapsulation: ViewEncapsulation.None,
 })
 export class DetailsComponent implements OnInit, AfterViewChecked {
   focused: boolean;
