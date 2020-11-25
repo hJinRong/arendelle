@@ -16,8 +16,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { RequestArticlesService } from '../request-articles.service';
 import { Article } from '../article';
 import { switchMap } from 'rxjs/operators';
-import { highlightBlock } from 'highlight.js';
 declare const marked: any;
+declare const hljs: any;
 
 @Component({
   selector: 'app-details',
@@ -111,6 +111,6 @@ export class DetailsComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked() {
     document
       .querySelectorAll<HTMLElement>('pre code')
-      .forEach((block) => highlightBlock(block));
+      .forEach((block) => hljs.highlightBlock(block));
   }
 }
