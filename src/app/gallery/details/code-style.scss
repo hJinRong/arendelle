@@ -1,5 +1,5 @@
-$code-font-size: clamp(13px, 1.5vw, 14px);
-$code-line-height: clamp(15px, 1.6vw, 16px);
+$code-font-size: clamp(0.8rem, calc(0.7354rem + 0.2756vw), 1rem);
+$code-line-height: clamp(0.93rem, calc(0.9074rem + 0.0965vw), 1rem);
 $code-font-family: 'JetbrainsMono';
 
 // 段落内代码关键词等
