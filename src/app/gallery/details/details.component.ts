@@ -1,7 +1,6 @@
 import {
   Component,
   OnInit,
-  DoCheck,
   AfterViewChecked,
   ViewEncapsulation,
 } from '@angular/core';
@@ -13,12 +12,12 @@ import {
   transition,
   animate,
 } from '@angular/animations';
-import * as marked from 'marked';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { RequestArticlesService } from '../request-articles.service';
 import { Article } from '../article';
 import { switchMap } from 'rxjs/operators';
 import { highlightBlock } from 'highlight.js';
+declare const marked: any;
 
 @Component({
   selector: 'app-details',

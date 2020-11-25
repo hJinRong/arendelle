@@ -23,10 +23,8 @@
     "@angular/platform-browser": "^10.1.2",
     "@angular/platform-browser-dynamic": "^10.1.2",
     "@angular/router": "^10.1.2",
-    "@types/highlight.js": "^9.12.4",
-    "highlight.js": "^10.1.1",
-    "marked": "^1.1.0",
-    "normalize.css": "^8.0.1",
+    "@types/highlight.js": "^10.1.0",
+    "highlight.js": "^10.4.0",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
